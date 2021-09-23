@@ -7,7 +7,7 @@ async function callApi() {
         const response = await fetch(url);
         const json = await response.json();
         console.log(json);
-        createHtml(json.data, ".result-container");
+        createHtml(json, ".result-container");
     } catch (error) {
         console.log(error);
         displayMessage("error", error, ".result-container");
